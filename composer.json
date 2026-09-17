@@ -1,0 +1,57 @@
+{
+    "name": "sarissaops/enviatodo-php",
+    "description": "Framework-agnostic PSR-18 client for the Enviatodo Shipping API.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sarissaops"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "php-http/client-common": "^2.2.1",
+        "php-http/discovery": "^1.19",
+        "psr/http-client": "^1.0",
+        "psr/http-message": "^1.0 || ^2.0",
+        "webmozart/assert": "^1.9.1 || ^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        },
+        "sort-packages": true
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.75",
+        "nyholm/psr7": "^1.8",
+        "phpstan/phpstan": "^2.2",
+        "phpunit/phpunit": "^10.5",
+        "symfony/http-client": "^7.0",
+        "vlucas/phpdotenv": "^5.0"
+    },
+    "suggest": {
+        "nyholm/psr7": "PSR-7 message implementation",
+        "symfony/http-client": "HTTP client",
+        "php-http/guzzle7-adapter": "Alternative PSR-18 backend"
+    },
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "SarissaOps\\Enviatodo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SarissaOps\\Enviatodo\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
